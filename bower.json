@@ -1,0 +1,28 @@
+{
+    "name": "angular-point-styles",
+    "version": "0.0.1",
+    "homepage": "https://github.com/scatcher/angular-point-styles",
+    "authors": [
+        "Scott <github@scotthatcher.com>"
+    ],
+    "distPath": "dist",
+    "description": "Shared style resources for angular-point projects.",
+    "license": "MIT",
+    "main": "less/",
+    "dependencies": {
+        "angular": "~1.2",
+        "angular-toastr": "latest",
+        "chance": "latest",
+        "jquery": "~1.11",
+        "lodash": "~2.4",
+        "lodash-deep": "~1.1",
+        "SPServices": "https://github.com/scatcher/SPServices.git#master"
+    },
+    "devDependencies": {
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ]
+}
