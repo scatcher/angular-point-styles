@@ -515,22 +515,26 @@
 @list-group-border:             #ddd;
 @list-group-border-radius:      @border-radius-base;
 
-
 @list-group-hover-bg:           #f5f5f5;
 @list-group-active-color:       @component-active-color;
 @list-group-active-bg:          @component-active-bg;
-
 @list-group-active-border:      @list-group-active-bg;
 @list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
 
-@list-group-link-color:         #555;
-@list-group-link-heading-color: #333;
+@list-group-disabled-color:      @gray-light;
+@list-group-disabled-bg:         @gray-lighter;
+@list-group-disabled-text-color: @list-group-disabled-color;
 
+@list-group-link-color:         #555;
+@list-group-link-hover-color:   @list-group-link-color;
+@list-group-link-heading-color: #333;
 
 // Panels
 // -------------------------
 @panel-bg:                    #fff;
 @panel-body-padding:          15px;
+@panel-heading-padding:       10px 15px;
+@panel-footer-padding:        @panel-heading-padding;
 @panel-border-radius:         @border-radius-base;
 
 @panel-inner-border:          #ddd;
@@ -647,6 +651,7 @@
 @blockquote-font-size:        (@font-size-base * 1.25);
 @blockquote-border-color:     @gray-lighter;
 @page-header-border-color:    @gray-lighter;
+@dl-horizontal-offset:        @component-offset-horizontal;
 
 // Miscellaneous
 // -------------------------
@@ -693,6 +698,12 @@
 @smart-navbar-color-start:		#f3f3f3;
 @smart-navbar-color-end:		#e2e2e2;
 
+// FOOTER
+// --------------------------------------------------
+@smart-footer-height: 52px;
+@smart-footer-padding: 15px (@grid-gutter-width/2) 0;
+@smart-footer-background: @asideColor-start;
+
 // RIBBON
 // --------------------------------------------------
 @ribbon-height:					40px;
@@ -730,19 +741,25 @@
 @asideNavExpanIconPush-x:		10px; /* the plus icon that appears on the parent nav when expanding and collapsing */
 @asideNavExpanIconPush-y:		10px; /* these values will only address the first parent in the entire nav */
 
+@asideExpanIconSize:			11px; /* the plus & minus icons */
+@asideExpanIconMT:				2px;  /* margin top */
+
 // SMARTADMIN ZINDEX
 // -------------------------
 // Used for a bird's eye view of components dependent on the z-axis
 // Try to avoid customizing these :)
 
-@fixed-navigation-zindex:		998;
-@fixed-ribbon-zindex:			999;
-@morris-hover:					1001;
-@left-panel-zindex:				1002;
-@hidden-lefthand-menu-zindex:	@left-panel-zindex;
-@ajax-dropdown-zindex:			1003;
+@fixed-navigation-zindex:		900;
+@fixed-ribbon-zindex:			@fixed-navigation-zindex+1; //901
+@fixed-footer-zindex:			@fixed-navigation-zindex+1; //901
+@morris-hover:					@fixed-navigation-zindex+3; //903
+@left-panel-zindex:				@fixed-navigation-zindex+4; //904
+@hidden-lefthand-menu-zindex:	@fixed-navigation-zindex+3; //903
+@ajax-dropdown-zindex:			@fixed-navigation-zindex+5; //905
 @pace-zindex:					2000;
 @tooltip-zindex:				9999;
+@ui-widget-overlay:				@fixed-navigation-zindex+49; //949
+
 
 // WIDGET TUNING
 // -------------------------
